@@ -54,4 +54,6 @@ public:
 };
 ```
 
-版本4：
+版本4：https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/
+
+直接参考http://blog.csdn.net/linhuanmars/article/details/23236995
