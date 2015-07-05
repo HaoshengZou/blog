@@ -39,3 +39,12 @@ public:
 
 需要注意一些细节，比如下标i和j的意义。i指的是前i个字符的字串能否分词，但string的下标又从零起，因此s.substr(j, i - j)实际正取出了第j+1到i个字符。此外，substr()函数的两个形参是substr(npos, count)，而非起止下标。以及wordB[0]=true的初始化也很重要，空的字串自然认为可以分词。
 
+---
+
+Took a deep look into Backpack Problem again, and found that how beautiful DP is! In BackPack Problem, it not only gives the maximum value, but can also easily gives the policy with no increase in time complexity!
+
+想一句话说明白动态规划：
+动态规划可以给出一类问题的最优解（满足最优化原理的问题）。
+动态规划的核心思想就是顾名思义，动态规划。
+形象地看，有一个N维状态数组记录状态，有一个状态转移方程对该数组操作。
+本质地看，感觉是：查看所有相关的最优子策略（而不是遍历），找到当前阶段的最优策略。
