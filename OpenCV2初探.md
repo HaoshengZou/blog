@@ -6,4 +6,6 @@ Mat类都是public成员，rows, cols记录行、列数，还有一个uchar* dat
 
 addr(M<sub>i, j, k</sub>) = M.data + M.step[0] * i + M.step[1] * j + M.step[2] * k
 
-i, j, k就对应row, col, channel的顺序，又有式M.step[i] >= M.step[i+1]*M.size[i+1]，因此，channel的step[2]最小，为1（最后一个维度总是这样），col的step[1]为3*1=3, row的step[0]为800（或实际列数）*3。
+i, j, k就对应row, col, channel的顺序，又有式M.step[i] >= M.step[i+1] * M.size[i+1]，
+因此，channel的step[2]最小，为1（最后一个维度总是这样），col的step[1]为3*1=3, 
+row的step[0]为800（或实际列数）*3。
